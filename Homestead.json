@@ -1,8 +1,0 @@
-[
-    {
-        "map": "test.com",
-        "to": "/home/vagrant/code/public",
-        "type":"plus",
-        "php":"5.3"
-    }
-]
