@@ -5,7 +5,7 @@ return [
         "map" => "test.com",
         "to" => "/mnt/d/wamp/www/test",
         "type" => "plus",
-        "php" => "5.3"
+        "php" => "5.6"
     ],
     [
         "map" => "crypt.910app.com",

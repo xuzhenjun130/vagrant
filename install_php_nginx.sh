@@ -147,32 +147,26 @@ EOF
 
 # Set The Nginx & PHP-FPM User
 
-sed -i "s/user www-data;/user www;/" /etc/nginx/nginx.conf
+sed -i "s/user www-data;/user $1;/" /etc/nginx/nginx.conf
 sed -i "s/# server_names_hash_bucket_size.*/server_names_hash_bucket_size 64;/" /etc/nginx/nginx.conf
 
-sed -i "s/user = www-data/user = www/" /etc/php/7.2/fpm/pool.d/www.conf
-sed -i "s/group = www-data/group = www/" /etc/php/7.2/fpm/pool.d/www.conf
+sed -i "s/user = www-data/user = $1/" /etc/php/7.2/fpm/pool.d/www.conf
+sed -i "s/group = www-data/group = $1/" /etc/php/7.2/fpm/pool.d/www.conf
 
-sed -i "s/listen\.owner.*/listen.owner = www/" /etc/php/7.2/fpm/pool.d/www.conf
-sed -i "s/listen\.group.*/listen.group = www/" /etc/php/7.2/fpm/pool.d/www.conf
+sed -i "s/listen\.owner.*/listen.owner = $1/" /etc/php/7.2/fpm/pool.d/www.conf
+sed -i "s/listen\.group.*/listen.group = $1/" /etc/php/7.2/fpm/pool.d/www.conf
 sed -i "s/;listen\.mode.*/listen.mode = 0666/" /etc/php/7.2/fpm/pool.d/www.conf
 
-sed -i "s/user = www-data/user = www/" /etc/php/5.6/fpm/pool.d/www.conf
-sed -i "s/group = www-data/group = www/" /etc/php/5.6/fpm/pool.d/www.conf
+sed -i "s/user = www-data/user = $1/" /etc/php/5.6/fpm/pool.d/www.conf
+sed -i "s/group = www-data/group = $1/" /etc/php/5.6/fpm/pool.d/www.conf
 
-sed -i "s/listen\.owner.*/listen.owner = www/" /etc/php/5.6/fpm/pool.d/www.conf
-sed -i "s/listen\.group.*/listen.group = www/" /etc/php/5.6/fpm/pool.d/www.conf
+sed -i "s/listen\.owner.*/listen.owner = $1/" /etc/php/5.6/fpm/pool.d/www.conf
+sed -i "s/listen\.group.*/listen.group = $1/" /etc/php/5.6/fpm/pool.d/www.conf
 sed -i "s/;listen\.mode.*/listen.mode = 0666/" /etc/php/5.6/fpm/pool.d/www.conf
 
 service nginx restart
 service php7.2-fpm restart
 service php5.6-fpm restart
-
-# Add www User To WWW
-
-usermod -a -G www www
-id www
-groups www
 
 
 # Clean Up
