@@ -73,5 +73,5 @@ block="server {
 }
 "
 
-echo "$block" > "/etc/nginx/sites-available/$1"
-ln -fs "/etc/nginx/sites-available/$1" "/etc/nginx/sites-enabled/$1"
+echo "$block" > "/etc/nginx/sites-available/$1.conf"
+ln -fs "/etc/nginx/sites-available/$1.conf" "/etc/nginx/sites-enabled/$1.conf"
