@@ -1,0 +1,23 @@
+{
+    "ip": "192.168.10.10",
+    "memory": 2048,
+    "cpus": 1,
+    "provider": "virtualbox",
+    "folders": [
+        {
+            "map": "E:/code",
+            "to": "/home/vagrant/code"
+        }
+    ],
+    "sites": [
+        {
+            "map": "test.com",
+            "to": "/home/vagrant/code/public",
+            "type":"plus",
+            "php":"5.3"
+        }
+    ],
+    "databases": [
+        "homestead"
+    ]
+}
