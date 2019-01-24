@@ -1,7 +1,7 @@
 
 # ubuntu18 编译安装php5.3
 
-使用homestead开发环境，默认已经安装了php5.6,php7+
+使用homestead开发环境，默认已经安装了php5.6,php7+，
 php5.3 太旧了，没有软件源可以通过 apt 安装上的。
 phpbrew 安装多版本php有点帮助，然而还是源码安装并不能解决php5.3的依赖问题。
 还是手动编译来吧。

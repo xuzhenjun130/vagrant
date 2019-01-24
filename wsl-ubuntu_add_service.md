@@ -2,7 +2,7 @@
 
 - `sudo service --status-all`  列出所有服务状态
 
-# 新增php5.3-fpm 服务
+# wsl 新增php5.3-fpm 服务
 
 ##  `/lib/systemd/system`  创建一个服务的定义文件
 
@@ -237,7 +237,12 @@ sudo service php5.3-fpm start
 
 ## 踩过的坑
 
--  只是新增服务文件，会报错，还需要增加init.d启动文件 /lib/systemd/system/php5.3-fpm.service
+不是wsl应该不会有这些问题。
+`sudo systemctl daemon-reload `:
+
+ system has not been booted with systemd as init system (pid 1). can't operate
+
+-  只是新增服务文件，会报错，还需要增加init.d启动文件 /etc/init.d/php5.3-fpm,
 
  system has not been booted with systemd as init system (pid 1). can't operate
 
@@ -245,4 +250,4 @@ sudo service php5.3-fpm start
 
  `strace -o /mnt/d/p.txt  service php5.3-fpm start`
 
-使用strace追踪，查看日志
+使用strace追踪，查看日志，发现缺少tmpfiles.d 文件
