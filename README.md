@@ -93,6 +93,8 @@ windows host文件 增加：`127.0.0.1  test.com`
 - http://test.com/
 - https://test.com/
 
+常见的php框架的nginx 配置都在 `scripts` 目录里面了, 开发项目新增个网站so easy！
+
 
 
 ## 修复 WSL 下 PHP+FastCGI 卡死的问题
