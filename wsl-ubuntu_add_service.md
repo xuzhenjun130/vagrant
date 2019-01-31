@@ -232,6 +232,8 @@ esac
 
 ## 启动服务
 
+sudo chmod +x /etc/init.d/php5.3-fpm
+
 sudo service php5.3-fpm start
 
 
