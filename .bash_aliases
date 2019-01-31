@@ -1,6 +1,9 @@
 alias ..="cd .."
 alias ...="cd ../.."
 
+alias l="ls -alh"
+alias ll="ls -alh"
+
 alias h='cd ~'
 alias c='clear'
 
