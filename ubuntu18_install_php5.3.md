@@ -14,7 +14,7 @@ https://bbs.aliyun.com/read/578230.html?utm_content=m_49602
 
 
 ```bash
-sudo apt install libmcrypt-dev  libbz2-dev libmysqlclient-dev libxml2-dev libcurl4-openssl-dev libpng-dev  libtool
+sudo apt install libmcrypt-dev  libbz2-dev libmysqlclient-dev libxml2-dev libcurl4-openssl-dev libpng-dev  libtool libreadline-dev
 # php5.3 用到的openssl比较旧，下载旧版本的编译安装
 wget "https://www.openssl.org/source/old/1.0.1/openssl-1.0.1t.tar.gz"
 tar xzf openssl-1.0.1t.tar.gz
