@@ -10,7 +10,7 @@ apt-get install -y software-properties-common curl
 apt-add-repository ppa:nginx/development -y
 apt-add-repository ppa:ondrej/php -y
 
-curl --silent --location https://deb.nodesource.com/setup_8.x | bash -
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 
 # Update Package Lists
 apt-get update
